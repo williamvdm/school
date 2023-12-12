@@ -325,6 +325,15 @@ class Program
     }
 }
 ```
+Uitvoer:
+Start programma
+Begonnen met berekening
+Begonnen met het ophalen van waarde voor 10
+Einde ophalen van waarde voor 10
+Begonnen met het ophalen van waarde voor 20
+Einde ophalen van waarde voor 20
+Einde berekening
+Eindresultaat: 60
 
 ### ORM & LINQ (D-1)
 
