@@ -155,6 +155,7 @@ public class Punt
 Implicit types stellen de compiler in staat om het datatype te bemiddelen op basis van de toegewezen waarde. In het voorbeeld wordt getal als een impliciete int geïnitialiseerd.
 ```csharp
 var getal = 10; // impliciete int
+int getal2 = 20; // Explicit int
 ```
 
 ### Extension methods
