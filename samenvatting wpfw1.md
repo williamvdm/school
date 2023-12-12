@@ -359,14 +359,18 @@ public class DbContext : System.Data.Entity.DbContext
 ### Hoe werkt HTTP
 HTTP (Hypertext Transfer Protocol) is het protocol dat wordt gebruikt voor communicatie op het wereldwijde web. Het maakt gebruik van een client-servermodel, waarbij een client (bijvoorbeeld een webbrowser) verzoeken indient en een server (bijvoorbeeld een webserver) de verzoeken verwerkt en de bijbehorende reacties retourneert. Hier is een vereenvoudigd voorbeeld van een HTTP-verzoek en -reactie:
 
-**Verzoek**
-    GET /index.html HTTP/1.1 **<- request**
-    Host: www.example.com **<- header**
+**Verzoek (GET)**
+```html
+        GET /index.html HTTP/1.1 <- request
+        Host: www.example.com <- header
+```
 
 **Reactie**
-    HTTP/1.1 200 OK **<- status**
-    Content-Type: text/html **<- header**
+```html
+    HTTP/1.1 200 OK <- status
+    Content-Type: text/html  <- header
     
+	Payload:
     <!DOCTYPE html>
     <html>
     <head>
@@ -376,6 +380,7 @@ HTTP (Hypertext Transfer Protocol) is het protocol dat wordt gebruikt voor commu
         <h1>Hallo, wereld!</h1>
     </body>
     </html>
+```
 **Payload ^**
 
 ### XSS (Cross Site Scripting)
