@@ -146,7 +146,7 @@ public class Punt
 
     public static Punt operator +(Punt a, Punt b)
     {
-        return new Punt { X = a.X + b.X, Y = a.Y + b.Y };
+        return new Punt { X = a.X + b.X, Y = a.Y + b.Y }; <- voorbeeld van object initializing
     }
 }
 ```
