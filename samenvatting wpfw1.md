@@ -361,25 +361,25 @@ HTTP (Hypertext Transfer Protocol) is het protocol dat wordt gebruikt voor commu
 
 **Verzoek (GET)**
 ```html
-        GET /index.html HTTP/1.1 <- request
-        Host: www.example.com <- header
+GET /index.html HTTP/1.1 <- request
+Host: www.example.com <- header
 ```
 
 **Reactie**
 ```html
-    HTTP/1.1 200 OK <- status
-    Content-Type: text/html  <- header
+HTTP/1.1 200 OK <- status
+Content-Type: text/html  <- header
     
-	Payload:
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <title>Voorbeeldpagina</title>
-    </head>
-    <body>
-        <h1>Hallo, wereld!</h1>
-    </body>
-    </html>
+Payload:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voorbeeldpagina</title>
+</head>
+<body>
+    <h1>Hallo, wereld!</h1>
+</body>
+</html>
 ```
 **Payload ^**
 
