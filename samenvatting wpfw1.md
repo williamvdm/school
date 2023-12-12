@@ -125,13 +125,14 @@ public class Voorbeeld<T> where T : class
 }
 ```
 ### Object en list initializers
-Object initializers bieden een eenvoudige syntactische suiker om objecten te initialiseren zonder expliciete constructors te gebruiken. List initializers stellen je in staat om collecties te initialiseren, zoals te zien is in het voorbeeld van de klasse Auto.
+Object initializers bieden syntactic sugar om objecten te initialiseren zonder expliciete constructors te gebruiken. 
+List initializers stellen je in staat om collecties te initialiseren.
 ```csharp
-public class Auto
-{
-    public string Merk { get; set; }
-    public string Model { get; set; }
-}
+// Object Initializer
+var person = new Person { Name = "John", Age = 30 };
+
+// List Initializer
+var numbers = new List<int> { 1, 2, 3, 4, 5 };
 ```
 
 ### Operator overloading
@@ -208,25 +209,20 @@ public static void Main()
 
 ## Testen mocks (D-2)
 ### Dependency injection
-Dependency Injection (DI) is een ontwerppatroon waarbij afhankelijkheden van een klasse van buitenaf worden geïnjecteerd, waardoor de klasse eenvoudiger kan worden getest en onderhouden. Het voorbeeld toont een klasse KlasseA die afhankelijk is van KlasseB.
+Dependency Injection (DI) is een ontwerppatroon waarbij afhankelijkheden van een klasse van buitenaf worden geïnjecteerd, waardoor de klasse eenvoudiger kan worden getest en onderhouden.
 ```csharp
-public class KlasseA
+public class Service
 {
-    private readonly KlasseB _klasseB;
+    private readonly IRepository _repository;
 
-    public KlasseA(KlasseB klasseB)
+    public Service(IRepository repository)
     {
-        _klasseB = klasseB;
-    }
-
-    public void DoeIets()
-    {
-        _klasseB.MethodeB();
+        _repository = repository;
     }
 }
 ```
 ### Mock class en xunit test (GEEN MOQ)
-Het voorbeeld toont het gebruik van een mockklasse (MockRepository) om een interface (IRepository) te implementeren voor testdoeleinden. De xUnit-test gebruikt deze mock om een verwacht resultaat te valideren.
+Het voorbeeld toont het gebruik van een mockklasse (MockRepository) om een interface (IRepository) te implementeren voor testdoeleinden. De xUnit test gebruikt deze mock om een verwacht resultaat te testen.
 ```csharp
 public interface IRepository
 {
@@ -283,6 +279,12 @@ public class MijnTestKlasse
 ```
 
 ### Async en functioneel programmeren (D-1)
+Async- en await worden gebruikt om asynchroon mogelijk te maken. Asynchrone code stelt je in staat om taken uit te voeren zonder te wachten tot ze zijn voltooid, waardoor je efficiënter met resources kunt omgaan en de algehele responsiviteit van je applicatie kunt verbeteren. Async maakt parallelle uitvoering van taken mogelijk zonder de hoofdthread te blokkeren, waardoor responsiviteit en efficiëntie verbeteren ten opzichte van synchrone, blokkerende code.
+
+Belangrijk:
+- Async methodes worden aangegeven met het async keyword: static async Task<int> BerekenWaardeAsync()
+- Het await-sleutelwoord wordt gebruikt binnen een asynchrone methode om te wachten op de voltooiing van een asynchrone taak zonder de thread te blokkeren. Bijvoorbeeld: int resultaat = await BerekenIetsAsync();
+- Asynchrone methoden retourneren vaak een Task<TResult> of Task. Task<TResult> wordt gebruikt als de methode een resultaat heeft, anders wordt Task gebruikt. Bijvoorbeeld: Task<int> BerekenIetsAsync()
 
 ```csharp
 class Program
@@ -419,7 +421,9 @@ Een JWT bevat claims (informatie) die door een server kunnen worden gemaakt en d
 
 ### DDoS (Distributed Denial of Service)
 Een DDoS-aanval is gericht op het overweldigen van een webserver met een grote hoeveelheid verkeer, waardoor de service voor legitieme gebruikers niet beschikbaar wordt. Maatregelen zoals het gebruik van een CDN (Content Delivery Network) kunnen helpen bij het verminderen van het risico op DDoS-aanvallen.
+
 ## API (C-1)
+
 ### JSON (JavaScript Object Notation)
 JSON is een lichtgewicht gegevensindeling die eenvoudig door mensen kan worden gelezen en geschreven, en eenvoudig door machines kan worden verwerkt en gegenereerd. Het heeft de vorm van sleutel-waardeparen en geordende lijsten. Een voorbeeld van JSON:
 
@@ -481,7 +485,6 @@ public class UserModel
 }
 ```
 
-
 #### Model Binding
 Het proces van het koppelen van HTTP-verzoekgegevens aan actieparameters in je controller.
 ```csharp
@@ -516,6 +519,11 @@ app.MapControllers();
 app.MapFallbackToFile("/index.html");
 ```
 
+Security middleware in ASP.NET Core
+```csharp
+app.UseHttps();
+app.UseCors();
+```
 
 ## Specflow (D-2)
 
