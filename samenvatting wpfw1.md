@@ -23,12 +23,24 @@ class DerivedClass : BaseClass
 }
 ```
 ### Properties
-Properties worden gebruikt om toegang te krijgen tot privévelden van een klasse. In dit geval wordt de Naam en Leeftijd van de klasse Persoon als properties gedefinieerd met automatische implementaties.
+get en set
 ```csharp
-public class Persoon
+public class TimePeriod
 {
-    public string Naam { get; set; }
-    public int Leeftijd { get; set; }
+    private double _seconds;
+
+    public double Hours
+    {
+        get { return _seconds / 3600; }
+        set
+        {
+            if (value < 0 || value > 24)
+                throw new ArgumentOutOfRangeException(nameof(value),
+                      "The valid range is between 0 and 24.");
+
+            _seconds = value * 3600;
+        }
+    }
 }
 ```
 ### Contravariance en covariance
