@@ -2,7 +2,8 @@
 Laatste update: 12-12-2023
 Door: William
 
-## C# (D-1)
+## C# (D-1) 16%
+
 ### Method hiding
 Method hiding wordt gebruikt wanneer een afgeleide klasse een methode met dezelfde naam als de basis klasse heeft, maar met het "new" sleutelwoord om aan te geven dat het de bedoeling is om de methode te verbergen. In dit voorbeeld wordt de methode Display in de afgeleide klasse verborgen ten opzichte van de basis klasse.
 ```csharp
@@ -208,7 +209,8 @@ public static void Main()
 }
 ```
 
-## Testen mocks (D-2)
+## Testen mocks (D-2) 15%
+
 ### Dependency injection
 Dependency Injection (DI) is een ontwerppatroon waarbij afhankelijkheden van een klasse van buitenaf worden geïnjecteerd, waardoor de klasse eenvoudiger kan worden getest en onderhouden.
 ```csharp
@@ -279,7 +281,7 @@ public class MijnTestKlasse
 // - etc.
 ```
 
-### Async en functioneel programmeren (D-1)
+### Async en functioneel programmeren (D-1) 15%
 Async- en await worden gebruikt om asynchroon mogelijk te maken. Asynchrone code stelt je in staat om taken uit te voeren zonder te wachten tot ze zijn voltooid, waardoor je efficiënter met resources kunt omgaan en de algehele responsiviteit van je applicatie kunt verbeteren. Async maakt parallelle uitvoering van taken mogelijk zonder de hoofdthread te blokkeren, waardoor responsiviteit en efficiëntie verbeteren ten opzichte van synchrone, blokkerende code.
 
 Belangrijk:
@@ -335,7 +337,7 @@ Uitvoer:
 - Einde berekening
 - Eindresultaat: 60
 
-### ORM & LINQ (D-1)
+### ORM & LINQ (D-1) 16%
 
 ### LINQ
 LINQ (Language Integrated Query) biedt een consistente manier om gegevens te queryen, ongeacht de gegevensbron. Het voorbeeld laat een LINQ-query zien die wordt gebruikt met Entity Framework om personen te filteren en te sorteren.
@@ -378,7 +380,7 @@ public class DbContext : System.Data.Entity.DbContext
 }
 ```
 
-## Internet (C-1 en C-8)
+## Internet (C-1 en C-8) 16%
 
 ### Hoe werkt HTTP
 HTTP (Hypertext Transfer Protocol) is het protocol dat wordt gebruikt voor communicatie op het wereldwijde web. Het maakt gebruik van een client-servermodel, waarbij een client (bijvoorbeeld een webbrowser) verzoeken indient en een server (bijvoorbeeld een webserver) de verzoeken verwerkt en de bijbehorende reacties retourneert. Hier is een vereenvoudigd voorbeeld van een HTTP-verzoek en -reactie:
@@ -432,7 +434,7 @@ Een JWT bevat claims (informatie) die door een server kunnen worden gemaakt en d
 ### DDoS (Distributed Denial of Service)
 Een DDoS-aanval is gericht op het overweldigen van een webserver met een grote hoeveelheid verkeer, waardoor de service voor legitieme gebruikers niet beschikbaar wordt. Maatregelen zoals het gebruik van een CDN (Content Delivery Network) kunnen helpen bij het verminderen van het risico op DDoS-aanvallen.
 
-## API (C-1)
+## API (C-1) 15%
 
 ### JSON (JavaScript Object Notation)
 JSON is een lichtgewicht gegevensindeling die eenvoudig door mensen kan worden gelezen en geschreven, en eenvoudig door machines kan worden verwerkt en gegenereerd. Het heeft de vorm van sleutel-waardeparen en geordende lijsten. Een voorbeeld van JSON:
@@ -535,7 +537,7 @@ app.UseHttps();
 app.UseCors();
 ```
 
-## Specflow (D-2)
+## Specflow (D-2) 7%
 
 ### Specflow in feature format
     Feature: BMI berekenen
