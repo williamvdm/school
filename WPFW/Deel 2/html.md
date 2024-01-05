@@ -95,9 +95,8 @@ div {
   color: blue;
 }
 ```
-De volgorde van selectors kan impact hebben op de manier waarop de CSS wordt toegepast. Als bijvoorbeeld een selector voor een element wordt gedefinieerd vóór een selector voor een element dat zich binnen het eerste element bevindt, dan worden de declaraties van de eerste selector ook toegepast op het tweede element.
 
-Bijvoorbeeld:
+### Impact
 ```css
 div {
     background-color: red;
