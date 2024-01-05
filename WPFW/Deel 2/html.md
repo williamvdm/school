@@ -107,18 +107,19 @@ div {
     width: 4rem;
     height: 2rem;
     border: 1px solid black;
-    background-color: blue;
 }
 ```
 ```html
+<div>
+    <p>Stukje tekst</p>
+</div>
 <div class="card">
     <h1>Card titel</h1>
     <p>Card paragraaf</p>
     <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">Gameplay video GTA VI</a>
 </div>
 ```
-De .card-selector is meer specifiek dan de div-selector, maar komt later in de CSS code. Dit betekent dat de declaratie voor de div-selector wordt toegepast op alle div-elementen, inclusief de "card". Daarom is de achtergrondkleur van de "card" rood.
-
+Beide hebben nu een rode achtergrond terwijl je dat misschien helemaal niet wilt.
 ## Block en Inline
 **Block-elementen**
 - Beginnen standaard op een nieuwe lijn
